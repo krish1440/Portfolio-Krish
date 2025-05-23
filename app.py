@@ -628,7 +628,7 @@ def home_section():
     """Home section with profile and introduction"""
     
     # Load and encode profile picture (JPG format)
-    profile_pic_path = "images/profile.JPG"
+    profile_pic_path = "images/profile.jpg"
     profile_pic_base64 = get_base64_of_bin_file(profile_pic_path)
     if profile_pic_base64 is None:
         st.error(f"Profile picture '{profile_pic_path}' not found. Please ensure the file exists in the images directory.")
@@ -802,6 +802,8 @@ def home_section():
 def education_section():
     """Education section with timeline style"""
     st.markdown('<h2 class="section-header">🎓 Education</h2>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
     
     # Education Card
     st.markdown("""
@@ -841,6 +843,8 @@ def education_section():
 def certifications_section():
     """Certifications section with download link inside the card"""
     st.markdown('<h2 class="section-header">🏆 Certifications</h2>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
     
     # Sample certifications - replace with your actual certifications
     certifications = [
@@ -920,6 +924,8 @@ def skills_section():
     """Skills section with categorized skill boxes"""
     st.markdown('<h2 class="section-header">⚡ Skills</h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    
     skills_data = {
         "Programming Languages": [
             "Python", "Java", "C", "HTML", "CSS", "JavaScript"
@@ -971,6 +977,8 @@ def skills_section():
 def projects_section():
     """Projects section"""
     st.markdown('<h2 class="section-header">🚀 Projects</h2>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
     
     # Sample projects - replace with your actual projects
     projects = [
@@ -1107,6 +1115,8 @@ def projects_section():
 def experience_section():
     """Experience section with download link inside the card"""
     st.markdown('<h2 class="section-header">💼 Experience</h2>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
     
     # Sample experiences - replace with your actual experiences
     experiences = [
