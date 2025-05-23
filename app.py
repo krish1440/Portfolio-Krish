@@ -445,24 +445,38 @@ def load_css():
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        margin-bottom: 1.5rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+        margin: 1.5rem auto;
+        max-width: 600px; /* Adjust as needed */
+        width: 100%; /* Ensure it takes available width up to max-width */
+        display: block; /* Ensure block-level for margin: auto */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Responsive Adjustments for Mobile */
+    /* Ensure centering in parent container */
+    div[data-testid="stVerticalBlock"] .card,
+    div[data-testid="stHorizontalBlock"] .card,
+    div.card {
+        margin-left: auto !important; /* Force centering */
+        margin-right: auto !important;
+    }
+
+    /* Tablets */
     @media (max-width: 768px) {
         .card {
-            padding: 1rem; /* Reduced padding for tablets */
-            max-width: 90%; /* Slightly narrower for better fit */
-            margin-bottom: 1rem; /* Reduced margin for tighter layout */
+            padding: 1rem;
+            max-width: 90%;
+            margin: 1rem auto !important; /* Force centering */
+            width: 100%;
         }
     }
 
+    /* Small Mobiles */
     @media (max-width: 480px) {
         .card {
-            padding: 0.8rem; /* Further reduced padding for small mobiles */
-            max-width: 95%; /* Maximize width for small screens */
-            margin-bottom: 0.8rem; /* Further reduced margin */
+            padding: 0.8rem;
+            max-width: 95%;
+            margin: 0.8rem auto !important; /* Force centering */
+            width: 100%;
         }
     }
 
@@ -473,14 +487,14 @@ def load_css():
     }
 
     .card-title {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         font-weight: 600;
         color: #2c3e50;
         margin-bottom: 0.8rem;
     }
 
     .card-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         font-weight: 500;
         color: #3498db;
         margin-bottom: 0.5rem;
@@ -628,7 +642,7 @@ def home_section():
     """Home section with profile and introduction"""
     
     # Load and encode profile picture (JPG format)
-    profile_pic_path = "images/profile.JPG"
+    profile_pic_path = "images/profile.jpg"
     profile_pic_base64 = get_base64_of_bin_file(profile_pic_path)
     if profile_pic_base64 is None:
         st.error(f"Profile picture '{profile_pic_path}' not found. Please ensure the file exists in the images directory.")
