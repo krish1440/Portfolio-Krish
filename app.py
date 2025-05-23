@@ -231,7 +231,7 @@ def load_css():
     }
 
     .greeting {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         color: #667eea;
         font-weight: 500;
         margin-bottom: 0.5rem;
