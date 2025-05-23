@@ -231,14 +231,14 @@ def load_css():
     }
 
     .greeting {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         color: #667eea;
         font-weight: 500;
         margin-bottom: 0.5rem;
     }
 
     .hero-name {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
         font-weight: 700;
         background: linear-gradient(45deg, #667eea, #764ba2);
         background-clip: text;
@@ -679,7 +679,7 @@ def home_section():
         st.markdown("""
         <div class="hero-content">
             <div class="greeting">👋 Hello, I'm</div>
-            <h1 class="hero-name">Krish Chaudhary</h1>
+            <h1 class="hero-name">Krish </br>Chaudhary</h1>
             <div class="role-container">
                 <span class="role-prefix">I'm a passionate</span>
                 <div class="rotating-roles">
