@@ -446,7 +446,7 @@ def load_css():
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         margin: 1.5rem auto;
-        max-width: 900px; /* Adjust as needed */
+        max-width: 1000px; /* Adjust as needed */
         width: 100%; /* Ensure it takes available width up to max-width */
         display: block; /* Ensure block-level for margin: auto */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
