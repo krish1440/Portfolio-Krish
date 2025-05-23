@@ -642,7 +642,7 @@ def home_section():
     """Home section with profile and introduction"""
     
     # Load and encode profile picture (JPG format)
-    profile_pic_path = "images/profile.JPG"
+    profile_pic_path = "images/profile.jpg"
     profile_pic_base64 = get_base64_of_bin_file(profile_pic_path)
     if profile_pic_base64 is None:
         st.error(f"Profile picture '{profile_pic_path}' not found. Please ensure the file exists in the images directory.")
