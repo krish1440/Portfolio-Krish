@@ -919,7 +919,7 @@ def certifications_section():
 def skills_section():
     """Skills section with categorized skill boxes"""
     st.markdown('<h2 class="section-header">⚡ Skills</h2>', unsafe_allow_html=True)
-    
+    st.markdown('<div </div>', unsafe_allow_html=True)
     skills_data = {
         "Programming Languages": [
             "Python", "Java", "C", "HTML", "CSS", "JavaScript"
