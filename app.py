@@ -231,7 +231,7 @@ def load_css():
     }
 
     .greeting {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #667eea;
         font-weight: 500;
         margin-bottom: 0.5rem;
@@ -531,11 +531,95 @@ def load_css():
 
     .footer {
         text-align: center;
-        padding: 1.5rem;
-        background: linear-gradient(135deg, #2c3e50, #3498db);
-        color: white;
-        margin-top: 2rem;
-        border-radius: 10px;
+        padding: 2rem 1.5rem;
+        background: linear-gradient(135deg, #1e2a44, #2b4b8e);
+        color: #e0e7ff;
+        margin-top: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .footer:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transition: left 0.8s ease;
+        z-index: 0;
+    }
+
+    .footer:hover::before {
+        left: 100%;
+    }
+
+    .footer p {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        z-index: 1;
+        position: relative;
+        background: linear-gradient(45deg, #a5b4fc, #e0e7ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .footer span {
+        font-size: 0.95rem;
+        color: #a5b4fc;
+        display: block;
+        margin-top: 0.5rem;
+        font-weight: 400;
+        z-index: 1;
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            padding: 1.5rem 1rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+
+        .footer p {
+            font-size: 1rem;
+        }
+
+        .footer span {
+            font-size: 0.85rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer {
+            padding: 1.2rem 0.8rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        .footer span {
+            font-size: 0.8rem;
+        }
     }
 
     a.download-btn {
@@ -1300,7 +1384,7 @@ def main():
     # Footer
     st.markdown("""
     <div class="footer">
-        <p><strong>Krish Chaudhary | All Rights Reserved - 2025</strong></p>
+        <a href="https://github.com/krish1440" target="_blank">presented by Krish Chaudhary @2025</a>
     </div>
     """, unsafe_allow_html=True)
 
