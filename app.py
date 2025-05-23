@@ -446,7 +446,7 @@ def load_css():
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         margin: 1.5rem auto;
-        max-width: 600px; /* Adjust as needed */
+        max-width: 900px; /* Adjust as needed */
         width: 100%; /* Ensure it takes available width up to max-width */
         display: block; /* Ensure block-level for margin: auto */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -642,7 +642,7 @@ def home_section():
     """Home section with profile and introduction"""
     
     # Load and encode profile picture (JPG format)
-    profile_pic_path = "images/profile.jpg"
+    profile_pic_path = "images/profile.JPG"
     profile_pic_base64 = get_base64_of_bin_file(profile_pic_path)
     if profile_pic_base64 is None:
         st.error(f"Profile picture '{profile_pic_path}' not found. Please ensure the file exists in the images directory.")
