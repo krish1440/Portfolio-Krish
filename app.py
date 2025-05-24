@@ -1404,16 +1404,24 @@ def experience_section():
 
 
 def main():
-    """Main function to run the portfolio with enhanced sidebar navigation"""
+    
     st.markdown("""
         <style>
-        /* Hide Streamlit default buttons on mobile */
+        /* Hide all secondary buttons and specific primary buttons in stToolbar on mobile */
         @media (max-width: 768px) {
-            div[data-testid="stToolbar"] {
+            /* Hide all secondary buttons (e.g., 'Manage app') */
+            div[data-testid="stToolbar"] button[kind="secondary"] {
                 display: none !important;
             }
-            footer {
-                display: none !important;
+            /* Hide individual primary buttons */
+            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(1) {
+                display: none !important; /* Typically 'Share' button */
+            }
+            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(2) {
+                display: none !important; /* Typically another primary button, e.g., 'Download' or 'Deploy' */
+            }
+            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(3) {
+                display: none !important; /* Adjust based on actual buttons in your toolbar */
             }
         }
         </style>
