@@ -1407,21 +1407,24 @@ def main():
     
     st.markdown("""
         <style>
-        /* Hide all secondary buttons and specific primary buttons in stToolbar on mobile */
+        /* Hide all primary and secondary buttons in stToolbar on mobile, except GitHub and three-dot menu */
         @media (max-width: 768px) {
             /* Hide all secondary buttons (e.g., 'Manage app') */
-            div[data-testid="stToolbar"] button[kind="secondary"] {
+            div[data-testid="stToolbar"] button[kind="secondary"],
+            div[data-testid="stToolbar"] button:not([title="Share on GitHub"]):not([aria-label="More"]) {
                 display: none !important;
             }
-            /* Hide individual primary buttons */
-            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(1) {
-                display: none !important; /* Typically 'Share' button */
+            /* Explicitly hide 'Manage app' button by targeting its specific attributes */
+            div[data-testid="stToolbar"] button[title="Manage app"] {
+                display: none !important;
             }
-            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(2) {
-                display: none !important; /* Typically another primary button, e.g., 'Download' or 'Deploy' */
+            /* Ensure GitHub button remains visible */
+            div[data-testid="stToolbar"] button[title="Share on GitHub"] {
+                display: inline-block !important;
             }
-            div[data-testid="stToolbar"] button[kind="primary"]:nth-child(3) {
-                display: none !important; /* Adjust based on actual buttons in your toolbar */
+            /* Ensure three-dot menu remains visible */
+            div[data-testid="stToolbar"] button[aria-label="More"] {
+                display: inline-block !important;
             }
         }
         </style>
