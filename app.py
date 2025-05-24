@@ -602,7 +602,208 @@ def load_css():
             height: 400px;
         }
     }
+    @media (max-width: 768px) {
+        .css-1v3fvcr {
+            width: 200px !important;
+            padding: 0.75rem !important;
+        }
+
+        .stButton > button {
+            height: 40px !important;
+            font-size: 0.85rem !important;
+        }
+
+        .section-header {
+            font-size: 1.8rem;
+        }
+
+        .hero-name {
+            font-size: 2.5rem;
+        }
+
+        .stats-section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .social-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .profile-img-new {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    /* New Mobile Responsive Adjustments */
+    @media (max-width: 480px) {
+        /* Adjust Sidebar for Small Screens */
+        .css-1v3fvcr {
+            width: 100% !important; /* Full width for mobile */
+            padding: 0.5rem !important;
+            position: relative !important; /* Ensure it fits within mobile layout */
+        }
+
+        /* Adjust Sidebar Buttons for Mobile */
+        .stButton > button {
+            height: 38px !important;
+            font-size: 0.8rem !important;
+            padding-left: 1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        /* Section Header for Mobile */
+        .section-header {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .section-header::after {
+            width: 60px; /* Smaller underline for mobile */
+        }
+
+        .section-header:hover::after {
+            width: 80px;
+        }
+
+        /* Profile Image for Mobile */
+        .profile-img-new {
+            width: 200px; /* Smaller size for mobile */
+            height: 200px;
+        }
+
+        /* Hero Section for Mobile */
+        .greeting {
+            font-size: 1.4rem;
+        }
+
+        .hero-name {
+            font-size: 2rem;
+        }
+
+        .role-container {
+            margin-bottom: 1rem;
+        }
+
+        .role-prefix {
+            font-size: 0.9rem;
+        }
+
+        .rotating-roles {
+            height: 25px;
+        }
+
+        .role-item {
+            font-size: 1.2rem;
+        }
+
+        .hero-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Social Section for Mobile */
+        .social-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-grid {
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+            max-width: 100%;
+            padding: 0 0.5rem;
+        }
+
+        .social-card {
+            padding: 0.8rem;
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-name {
+            font-size: 1.2rem;
+        }
+
+        .social-desc {
+            font-size: 0.85rem;
+        }
+
+        /* Contact Form for Mobile */
+        .contact-form {
+            padding: 1rem;
+        }
+
+        /* Download Button for Mobile */
+        a.download-btn {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Timeline for Mobile */
+        .timeline-item {
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item::before {
+            left: -5px;
+            width: 8px;
+            height: 8px;
+        }
+
+        /* Skill Tags for Mobile */
+        .skill-tag {
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            margin: 3px;
+        }
+    }
+
+    /* Additional Breakpoint for Larger Mobile Devices (360px - 480px) */
+    @media (max-width: 360px) {
+        .profile-img-new {
+            width: 150px;
+            height: 150px;
+        }
+
+        .greeting {
+            font-size: 1.2rem;
+        }
+
+        .hero-name {
+            font-size: 1.8rem;
+        }
+
+        .section-header {
+            font-size: 1.3rem;
+        }
+
+        .social-title {
+            font-size: 1.5rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            width: 36px;
+            height: 36px;
+        }
+
+        .social-name {
+            font-size: 1.1rem;
+        }
+
+        .social-desc {
+            font-size: 0.8rem;
+        }
+    }
+    
     </style>
+                
     """, unsafe_allow_html=True)
 
 def get_base64_of_bin_file(bin_file):
