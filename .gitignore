@@ -1,0 +1,76 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.env
+.env
+*.egg-info/
+dist/
+build/
+*.ipynb_checkpoints/
+
+# Streamlit-specific ignores
+.streamlit/
+*.streamlit
+
+# Sensitive files and directories
+secrets.toml
+credentials.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cert
+
+# Media and static files (if not meant to be tracked)
+images/*
+resume/*
+certificates/*
+experience/*
+*.jpg
+*.png
+*.pdf
+*.jpeg
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.log.*
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Virtual environment and dependency management
+pip-log.txt
+pip-delete-this-directory.txt
+*.lock
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Other miscellaneous
+*.bak
+*.gho
+*.ori
+*.orig
+*.cache
+*.coverage
+coverage.xml
+*.pytest_cache/
+*.coverage.*
