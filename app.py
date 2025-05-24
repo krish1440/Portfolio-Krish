@@ -8,6 +8,7 @@ st.set_page_config(
     page_title="Krish Chaudhary | Portfolio",
     page_icon="👨‍💻",
     layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
 # Updated CSS function with proper Streamlit button styling
@@ -1403,26 +1404,26 @@ def experience_section():
 
 
 def main():
-    hide_specific_menu_items = """
+    """Main function to run the portfolio with enhanced sidebar navigation"""
+    st.markdown("""
         <style>
-        /* Hide specific menu items by targeting their text or class */
-        div[data-testid="stToolbar"] button[title="Share"] {display: none;}
-        div[data-testid="stToolbar"] button[title="Star"] {display: none;}
-        div[data-testid="stToolbar"] button[title="Edit"] {display: none;}
-        div[data-testid="stToolbar"] button[title="Manage app"] {display: none;}
+        /* Hide Streamlit default buttons on mobile */
+        @media (max-width: 768px) {
+            div[data-testid="stToolbar"] {
+                display: none !important;
+            }
+            footer {
+                display: none !important;
+            }
+        }
         </style>
-        """
-    st.markdown(hide_specific_menu_items, unsafe_allow_html=True)
-    
-    
+    """, unsafe_allow_html=True)
     # Load custom CSS
     load_css()
     
     # Initialize session state
     if 'current_section' not in st.session_state:
         st.session_state.current_section = 'Home'
-    if "sidebar_state" not in st.session_state:
-        st.session_state.sidebar_state = "collapsed"
     
     # Sidebar Navigation
     with st.sidebar:
