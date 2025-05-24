@@ -805,6 +805,11 @@ def load_css():
             font-size: 0.8rem;
         }
     }
+    @media (max-width: 768px) {
+       div[data-testid="stToolbar"] button:not([aria-label="More"]) {
+           display: none !important;
+       }
+    }
     
     </style>
                 
@@ -1404,7 +1409,6 @@ def experience_section():
 
 
 def main():
-    """Main function to run the portfolio with enhanced sidebar navigation"""
     
     # Load custom CSS
     load_css()
