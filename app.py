@@ -1404,31 +1404,8 @@ def experience_section():
 
 
 def main():
+    """Main function to run the portfolio with enhanced sidebar navigation"""
     
-    st.markdown("""
-        <style>
-        /* Hide all primary and secondary buttons in stToolbar on mobile, except GitHub and three-dot menu */
-        @media (max-width: 768px) {
-            /* Hide all secondary buttons (e.g., 'Manage app') */
-            div[data-testid="stToolbar"] button[kind="secondary"],
-            div[data-testid="stToolbar"] button:not([title="Share on GitHub"]):not([aria-label="More"]) {
-                display: none !important;
-            }
-            /* Explicitly hide 'Manage app' button by targeting its specific attributes */
-            div[data-testid="stToolbar"] button[title="Manage app"] {
-                display: none !important;
-            }
-            /* Ensure GitHub button remains visible */
-            div[data-testid="stToolbar"] button[title="Share on GitHub"] {
-                display: inline-block !important;
-            }
-            /* Ensure three-dot menu remains visible */
-            div[data-testid="stToolbar"] button[aria-label="More"] {
-                display: inline-block !important;
-            }
-        }
-        </style>
-    """, unsafe_allow_html=True)
     # Load custom CSS
     load_css()
     
