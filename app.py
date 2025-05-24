@@ -192,9 +192,13 @@ def load_css():
         object-fit: cover;
     }
 
+    
     .profile-img-new:hover {
-        transform: scale(1.03);
+        transform: scale(1.05) rotate(4deg); /* Added subtle rotation for dynamic effect */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(102,126,234,0.5); /* Enhanced shadow and glow */
+        filter: brightness(1.0); /* Slight brightness increase for vibrancy */
     }
+
 
     .status-indicator {
         display: flex;
