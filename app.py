@@ -534,7 +534,7 @@ def load_css():
     .footer {
         text-align: center;
         padding: 2rem 1.5rem;
-        background: linear-gradient(135deg, #1e2a44, #2b4b8e);
+        background: linear-gradient(135deg, #2d2d2d, #4a4a4a); /* Neutral dark gray gradient for professionalism */
         color: #e0e7ff;
         margin-top: 3rem;
         border-radius: 12px;
@@ -559,7 +559,7 @@ def load_css():
         background: linear-gradient(
             90deg,
             transparent,
-            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.15), /* Slightly brighter for subtle shine */
             transparent
         );
         transition: left 0.8s ease;
@@ -578,7 +578,7 @@ def load_css():
         text-transform: uppercase;
         z-index: 1;
         position: relative;
-        background: linear-gradient(45deg, #a5b4fc, #e0e7ff);
+        background: linear-gradient(45deg, #60a5fa, #bfdbfe); /* Brighter blue gradient for better contrast */
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -586,7 +586,7 @@ def load_css():
 
     .footer span {
         font-size: 0.95rem;
-        color: #a5b4fc;
+        color: #bfdbfe; /* Lighter blue for better readability */
         display: block;
         margin-top: 0.5rem;
         font-weight: 400;
@@ -910,7 +910,7 @@ def education_section():
     <div class="card">
         <div class="timeline-item">
             <h2 class="card-title">2023 - 2027</h2>
-            <h3 class="card-subtitle">Parul University </br>Vadodara, Gujrat, India </h3>
+            <h3 class="card-subtitle">Parul University </br> Vadodara, Gujrat, India</h3>
             <p style="font-weight: 600; color: #3498db;">B.Tech CSE-AI (2023 - 2027)</p>
             <p class="card-text">
                 As a student at Parul University, I'm immersed in a dynamic academic environment renowned for its 
@@ -1386,7 +1386,7 @@ def main():
     # Footer
     st.markdown("""
     <div class="footer">
-        <a href="https://github.com/krish1440" target="_blank">presented by Krish Chaudhary @2025</a>
+        <a href="https://github.com/krish1440" target="_blank">Presented by Krish Chaudhary @2025</a>
     </div>
     """, unsafe_allow_html=True)
 
