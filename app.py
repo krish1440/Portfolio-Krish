@@ -405,11 +405,13 @@ def load_css():
         color: inherit;
         transition: transform 0.3s ease;
         border-left: 3px solid transparent;
+        text-decoration: none !important;
     }
 
     .social-card:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        text-decoration: none !important;
     }
 
     .social-card.linkedin { border-left-color: #0077B5 }
