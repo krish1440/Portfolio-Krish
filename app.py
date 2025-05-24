@@ -806,7 +806,7 @@ def load_css():
         }
     }
     @media (max-width: 768px) {
-       div[data-testid="stToolbar"] button:not([aria-label="More"]) {
+       div[data-testid="stToolbar"] button:not([aria-label="Event"]) {
            display: none !important;
        }
     }
