@@ -501,6 +501,7 @@ def load_css():
         font-weight: 600;
         color: #2c3e50;
         margin-bottom: 0.8rem;
+        -webkit-text-fill-color: #2c3e50;
     }
 
     .card-subtitle {
@@ -508,12 +509,14 @@ def load_css():
         font-weight: 500;
         color: #3498db;
         margin-bottom: 0.5rem;
+        -webkit-text-fill-color: #3498db;
     }
 
     .card-text {
         font-size: 0.95rem;
         line-height: 1.6;
         color: #5a6c7d;
+                
     }
 
     .skill-tag {
@@ -1629,6 +1632,7 @@ def main():
     # Display selected section
     if st.session_state.current_section == 'Home':
         home_section()
+        
     elif st.session_state.current_section == 'Areas of Interest':
         areas_of_interest_section()
     elif st.session_state.current_section == 'Education':
