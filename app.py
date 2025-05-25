@@ -20,6 +20,11 @@ def load_css():
     *{
         font-family: 'Inter', sans-serif;
     }
+    div[data-testid="stToolbarActionButton"] > div:nth-child(1),
+    div[data-testid="stToolbarActionButton"] > div:nth-child(2),
+    div[data-testid="stToolbarActionButton"] > div:nth-child(3) {
+        display: none !important;
+    }
 
     /* Sidebar Styling */
     .css-1v3fvcr {
