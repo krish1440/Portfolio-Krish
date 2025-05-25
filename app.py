@@ -30,6 +30,35 @@ def load_css():
         box-shadow: 3px 0 15px rgba(0,0,0,0.3);
         overflow-y: auto;
     }
+    .st-emotion-cache-gsulwm svg {
+        display: none !important;
+    }
+    .st-emotion-cache-gsulwm button::before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMyA2aDE4djJIM3ptMCA1aDE4djJIM3ptMCA1aDE4djJIM3oiLz48L3N2Zz4=");
+        background-size: cover;
+        position: relative;
+        top: 2px;
+    }
+    .st-emotion-cache-gsulwm button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: Armando 8px !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .st-emotion-cache-gsulwm button:hover {
+        background: rgba(59, 130, 246, 0.1) !important;
+        transform: scale(1.1) !important;
+    }
+    
 
     /* Sidebar Navigation Buttons */
     .stButton > button {
