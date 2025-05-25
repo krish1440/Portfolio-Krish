@@ -172,10 +172,9 @@ def load_css():
             padding-left: 1.2rem !important;
         }
     }
-    .st-emotion-cache-1wbqy5l ekuhni80{
-        display: none;
-        
-    }
+   .st-emotion-cache-15ecox0 {
+    display: none !important;
+}
 
     /* Section Header Styles */
     .section-header {
