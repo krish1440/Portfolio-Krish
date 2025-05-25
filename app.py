@@ -140,13 +140,17 @@ def load_css():
         font-weight: 600;
         text-align: center;
         margin: 2rem 0 1.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .section-header span {
         background: linear-gradient(90deg, #3b82f6, #8b5cf6);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
+
     .section-header:hover {
        transform: scale(1.05); /* Slight scale for emphasis */
        text-shadow: 0 0 8px rgba(59, 130, 246, 0.5); /* Subtle glow effect */
@@ -1062,7 +1066,7 @@ def home_section():
 
 def education_section():
     """Education section with timeline style"""
-    st.markdown('<h2 class="section-header">🎓 Education</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header">🎓 <span>Education</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
@@ -1103,7 +1107,7 @@ def education_section():
 
 def certifications_section():
     """Certifications section with download link inside the card"""
-    st.markdown('<h2 class="section-header">🏆 Certifications</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header"> 🏆 <span>Certifications</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
@@ -1183,7 +1187,7 @@ def certifications_section():
 
 def skills_section():
     """Skills section with categorized skill boxes"""
-    st.markdown('<h2 class="section-header">⚡ Skills</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header"> ⚡ <span>Skills</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
@@ -1237,7 +1241,7 @@ def skills_section():
 
 def projects_section():
     """Projects section"""
-    st.markdown('<h2 class="section-header">🚀 Projects</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header"> 🚀  <span>Projects</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
@@ -1375,7 +1379,7 @@ def projects_section():
 
 def experience_section():
     """Experience section with download link inside the card"""
-    st.markdown('<h2 class="section-header">💼 Experience</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header"> 💼  <span>Experience</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
@@ -1452,74 +1456,75 @@ def experience_section():
             st.error(error_message)
 
 def areas_of_interest_section():
-    st.markdown('<h2 class="section-header">Areas of Interest</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 class="section-header"> 🎯  <span>Areas of Interest</span></h2>', unsafe_allow_html=True)
+    
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     
     areas_of_interest = {
         "Core Areas of Data Science": [
             {
-                "name": "Machine Learning (ML)",
+                "name": "🤖Machine Learning (ML)",
                 "description": "Developing predictive models using algorithms like regression, classification, and clustering. Focused on optimizing model performance and interpretability."
             },
             {
-                "name": "Deep Learning",
+                "name": "🧠Deep Learning",
                 "description": "Building neural networks for complex tasks like image recognition and NLP. Passionate about leveraging frameworks like TensorFlow and PyTorch."
             },
             {
-                "name": "Natural Language Processing (NLP)",
+                "name": "🗣️Natural Language Processing (NLP)",
                 "description": "Creating solutions for text analysis, sentiment detection, and chatbots. Skilled in using NLTK, SpaCy, and Transformers for language tasks."
             },
             {
-                "name": "Data Analytics",
+                "name": "📊Data Analytics",
                 "description": "Extracting actionable insights from data to drive business decisions. Proficient in statistical analysis and visualization tools like Power BI."
             },
             {
-                "name": "Exploratory Data Analysis (EDA)",
+                "name": "🔍Exploratory Data Analysis (EDA)",
                 "description": "Uncovering patterns and trends through data visualization and statistical techniques. Adept at using Pandas, Seaborn, and Matplotlib for insights."
             },
             {
-                "name": "Business Intelligence (BI)",
+                "name": "📊Business Intelligence (BI)",
                 "description": "Crafting interactive dashboards to communicate insights effectively. Expertise in Power BI, Tableau, and Looker for strategic reporting."
             }
         ],
         "Infrastructure & Engineering": [
             {
-                "name": "Cloud Computing",
+                "name": "☁️Cloud Computing",
                 "description": "Deploying scalable data solutions on platforms like AWS, Azure, and Google Cloud. Focused on cost-efficient and secure cloud architectures."
             },
             {
-                "name": "Database Management",
+                "name": "🛢️Database Management",
                 "description": "Managing relational and NoSQL databases like MySQL, PostgreSQL, and MongoDB. Skilled in optimizing queries and ensuring data integrity."
             },
             {
-                "name": "Model Deployment & MLOps",
+                "name": "🚀Model Deployment & MLOps",
                 "description": "Operationalizing ML models with tools like MLflow and Docker. Ensuring seamless integration and monitoring in production environments."
             },
             {
-                "name": "Big Data & Distributed Computing",
+                "name": "🧮Big Data & Distributed Computing",
                 "description": "Processing large-scale datasets using Hadoop, Spark, and distributed systems. Focused on efficient data handling for real-time analytics."
             },
             {
-                "name": "Data Engineering",
+                "name": "⚙️Data Engineering",
                 "description": "Designing robust ETL pipelines for data integration and processing. Experienced with tools like Apache Airflow and SQL for scalable workflows."
             },
             {
-                "name": "AutoML & Low-code Platforms",
+                "name": "🤖AutoML & Low-code Platforms",
                 "description": "Automating model selection and hyperparameter tuning with tools like H2O.ai, Auto-sklearn, and Google AutoML. Enabling rapid prototyping through low-code platforms like DataRobot and KNIME."
             }
         ],
         "AI Specializations": [
             {
-                "name": "Computer Vision",
+                "name": "📸Computer Vision",
                 "description": "Designing and training models to interpret visual data using techniques like image classification, object detection, and segmentation with CNNs and OpenCV."
             },
             {
-                "name": "Reinforcement Learning",
+                "name": "🎮Reinforcement Learning",
                 "description": "Building intelligent agents that learn by interacting with environments. Skilled in policy gradients, Q-learning, and OpenAI Gym."
             },
             {
-                "name": "Generative AI",
+                "name": "🌀Generative AI",
                 "description": "Creating synthetic data, images, and text using GANs and large language models. Experience with tools like DALL·E, GPT, and StyleGAN."
             }
 
