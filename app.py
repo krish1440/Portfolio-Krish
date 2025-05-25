@@ -58,12 +58,22 @@ def load_css():
         background: rgba(59, 130, 246, 0.1) !important;
         transform: scale(1.1) !important;
     }
+    .st-emotion-cache-vlxhtx {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        display: flex;
+        flex: 1 1 0%;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
     
 
     /* Sidebar Navigation Buttons */
     .stButton > button {
         width: 100%;
-        height: 50px;
+        height: 30px;
         background: #ffffff !important;
         border: 2px solid #3B82F6 !important;
         color: #000000 !important;
@@ -76,11 +86,12 @@ def load_css():
         transition: all 0.4s ease !important;
         position: relative !important;
         overflow: hidden !important;
-        margin-bottom: 0.75rem !important;
+        margin-bottom: 0.05rem !important;
         display: flex !important;
         align-items: center !important;
-        justify-content: flex-start !important;
-        padding-left: 1.5rem !important;
+        gap: 0.5rem !important;
+        
+        
         box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
         z-index: 1;
     }
