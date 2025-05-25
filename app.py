@@ -570,7 +570,19 @@ def load_css():
         width: 10px;
         height: 10px;
         border-radius: 50%;
+       
         background: #667eea;
+    }
+    .interest-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .interest-list li {
+        font-size: 1rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
     }
 
     /* Responsive Adjustments */
@@ -604,6 +616,24 @@ def load_css():
         .profile-img-new {
             width: 400px;
             height: 400px;
+        }
+        .interest-list {
+        padding: 0;
+    
+
+        .interest-list li {
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .interest-item .skill-tag {
+            font-size: 0.85rem;
+            padding: 4px 8px;
+        }
+
+        .interest-item .card-text {
+            font-size: 0.8rem;
+            line-height: 1.4;
         }
     }
     @media (max-width: 768px) {
@@ -766,6 +796,7 @@ def load_css():
             font-size: 0.75rem;
             margin: 3px;
         }
+        
     }
 
     /* Additional Breakpoint for Larger Mobile Devices (360px - 480px) */
@@ -803,6 +834,19 @@ def load_css():
 
         .social-desc {
             font-size: 0.8rem;
+        }
+        .interest-list li {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    
+        .interest-item .skill-tag {
+            font-size: 0.8rem;
+            padding: 3px 6px;
+        }
+
+        .interest-item .card-text {
+            font-size: 0.75rem;
+            line-height: 1.3;
         }
     }
     @media (max-width: 768px) {
@@ -1407,6 +1451,98 @@ def experience_section():
         if error_message:
             st.error(error_message)
 
+def areas_of_interest_section():
+    st.markdown('<h2 class="section-header">Areas of Interest</h2>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    st.markdown('<div </div>', unsafe_allow_html=True)
+    
+    areas_of_interest = {
+        "Core Areas of Data Science": [
+            {
+                "name": "Machine Learning (ML)",
+                "description": "Developing predictive models using algorithms like regression, classification, and clustering. Focused on optimizing model performance and interpretability."
+            },
+            {
+                "name": "Deep Learning",
+                "description": "Building neural networks for complex tasks like image recognition and NLP. Passionate about leveraging frameworks like TensorFlow and PyTorch."
+            },
+            {
+                "name": "Natural Language Processing (NLP)",
+                "description": "Creating solutions for text analysis, sentiment detection, and chatbots. Skilled in using NLTK, SpaCy, and Transformers for language tasks."
+            },
+            {
+                "name": "Data Analytics",
+                "description": "Extracting actionable insights from data to drive business decisions. Proficient in statistical analysis and visualization tools like Power BI."
+            },
+            {
+                "name": "Exploratory Data Analysis (EDA)",
+                "description": "Uncovering patterns and trends through data visualization and statistical techniques. Adept at using Pandas, Seaborn, and Matplotlib for insights."
+            },
+            {
+                "name": "Business Intelligence (BI)",
+                "description": "Crafting interactive dashboards to communicate insights effectively. Expertise in Power BI, Tableau, and Looker for strategic reporting."
+            }
+        ],
+        "Infrastructure & Engineering": [
+            {
+                "name": "Cloud Computing",
+                "description": "Deploying scalable data solutions on platforms like AWS, Azure, and Google Cloud. Focused on cost-efficient and secure cloud architectures."
+            },
+            {
+                "name": "Database Management",
+                "description": "Managing relational and NoSQL databases like MySQL, PostgreSQL, and MongoDB. Skilled in optimizing queries and ensuring data integrity."
+            },
+            {
+                "name": "Model Deployment & MLOps",
+                "description": "Operationalizing ML models with tools like MLflow and Docker. Ensuring seamless integration and monitoring in production environments."
+            },
+            {
+                "name": "Big Data & Distributed Computing",
+                "description": "Processing large-scale datasets using Hadoop, Spark, and distributed systems. Focused on efficient data handling for real-time analytics."
+            },
+            {
+                "name": "Data Engineering",
+                "description": "Designing robust ETL pipelines for data integration and processing. Experienced with tools like Apache Airflow and SQL for scalable workflows."
+            },
+            {
+                "name": "AutoML & Low-code Platforms",
+                "description": "Automating model selection and hyperparameter tuning with tools like H2O.ai, Auto-sklearn, and Google AutoML. Enabling rapid prototyping through low-code platforms like DataRobot and KNIME."
+            }
+        ],
+        "AI Specializations": [
+            {
+                "name": "Computer Vision",
+                "description": "Designing and training models to interpret visual data using techniques like image classification, object detection, and segmentation with CNNs and OpenCV."
+            },
+            {
+                "name": "Reinforcement Learning",
+                "description": "Building intelligent agents that learn by interacting with environments. Skilled in policy gradients, Q-learning, and OpenAI Gym."
+            },
+            {
+                "name": "Generative AI",
+                "description": "Creating synthetic data, images, and text using GANs and large language models. Experience with tools like DALL·E, GPT, and StyleGAN."
+            }
+
+        ]
+    }
+    
+    cols = st.columns(2)
+    
+    for i, (category, areas) in enumerate(areas_of_interest.items()):
+        with cols[i % 2]:
+            area_content = ''.join([
+                f'<div class="interest-item"><span class="skill-tag">{area["name"]}</span><p class="card-text">{area["description"]}</p></div>'
+                for area in areas
+            ])
+            st.markdown(f"""
+            <div class="card">
+                <h3 class="card-title">{category}</h3>
+                <div class="interest-list">
+                    {area_content}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
 
 def main():
     
@@ -1420,7 +1556,7 @@ def main():
     # Sidebar Navigation
     with st.sidebar:
         st.markdown('<div class="sidebar-container">', unsafe_allow_html=True)
-        sections = ['Home', 'Education', 'Certifications', 'Skills', 'Projects', 'Experience']
+        sections = ['Home', 'Areas of Interest', 'Education', 'Certifications', 'Skills', 'Projects', 'Experience']
         
         for section in sections:
             # Add active class wrapper for current section
@@ -1488,6 +1624,8 @@ def main():
     # Display selected section
     if st.session_state.current_section == 'Home':
         home_section()
+    elif st.session_state.current_section == 'Areas of Interest':
+        areas_of_interest_section()
     elif st.session_state.current_section == 'Education':
         education_section()
     elif st.session_state.current_section == 'Certifications':
