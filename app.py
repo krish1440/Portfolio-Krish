@@ -936,7 +936,7 @@ def create_download_link(file_path, link_text):
 
     
 def home_section():
-    
+  try:
        
     # Load and encode profile picture (JPG format)
     profile_pic_path = "images/profile.jpg"
@@ -1109,8 +1109,11 @@ def home_section():
     };
     </script>
     """, unsafe_allow_html=True)
+  except:
+    st.error("Something went wrong. Please reload the page.")
 
 def education_section():
+  try:
     """Education section with timeline style"""
     st.markdown('<h2 class="section-header">🎓 <span>Education</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1149,9 +1152,12 @@ def education_section():
         </div>
     </div>
     """, unsafe_allow_html=True)
+  except:
+    st.error("Something went wrong. Please reload the page.")
 
 
 def certifications_section():
+  try:
     """Certifications section with download link inside the card"""
     st.markdown('<h2 class="section-header"> 🏆 <span>Certifications</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1230,8 +1236,11 @@ def certifications_section():
         # Display error message if file access failed
         if error_message:
             st.error(error_message)
+  except:
+      st.error("Somthing went wrong!!")
 
 def skills_section():
+  try:
     """Skills section with categorized skill boxes"""
     st.markdown('<h2 class="section-header"> ⚡ <span>Skills</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1284,8 +1293,11 @@ def skills_section():
                 </div>
             </div>
             """, unsafe_allow_html=True)
+  except:
+      st.error("Somthing went wrong!!")
 
 def projects_section():
+  try:
     """Projects section"""
     st.markdown('<h2 class="section-header"> 🚀  <span>Projects</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1422,8 +1434,11 @@ def projects_section():
                 </a>
         </div>
         """, unsafe_allow_html=True)
+  except:
+      st.error("Somthing went wrong!!")
 
 def experience_section():
+  try:
     """Experience section with download link inside the card"""
     st.markdown('<h2 class="section-header"> 💼  <span>Experience</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1500,8 +1515,11 @@ def experience_section():
         # Display error message if file access failed
         if error_message:
             st.error(error_message)
+  except:
+    st.error("Error in experiences section")
 
 def areas_of_interest_section():
+  try:
     st.markdown('<h2 class="section-header"> 🎯  <span>Areas of Interest</span></h2>', unsafe_allow_html=True)
     
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1593,9 +1611,12 @@ def areas_of_interest_section():
                 </div>
             </div>
             """, unsafe_allow_html=True)
+  except:
+    st.error("Error in areas of interest section")
 
 
 def main():
+  try:
     
     # Load custom CSS
     load_css()
@@ -1674,8 +1695,7 @@ def main():
     
     # Display selected section
     if st.session_state.current_section == 'Home':
-        home_section()
-        
+        home_section()     
     elif st.session_state.current_section == 'Areas of Interest':
         areas_of_interest_section()
     elif st.session_state.current_section == 'Education':
@@ -1688,7 +1708,8 @@ def main():
         projects_section()
     elif st.session_state.current_section == 'Experience':
         experience_section()
-
+  except:
+    st.error("Somthing Went Wrong!!")
 
 if __name__ == '__main__':
     main()
