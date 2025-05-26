@@ -936,8 +936,17 @@ def create_download_link(file_path, link_text):
 
     
 def home_section():
-    """Home section with profile and introduction"""
-    
+    st.markdown("""
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B150YR399D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B150YR399D');
+    </script>
+    """, unsafe_allow_html=True)
+       
     # Load and encode profile picture (JPG format)
     profile_pic_path = "images/profile.jpg"
     profile_pic_base64 = get_base64_of_bin_file(profile_pic_path)
@@ -1432,18 +1441,6 @@ def experience_section():
     # Sample experiences - replace with your actual experiences
     experiences = [
         {
-            "company": "INeuron Intelligence Pvt Ltd",
-            "position": "Data Analyst Intern</br>Remote",
-            "period": "June 2024 - July 2024",
-            "certificate": "experience/ineuron_certificate.pdf",
-            "description": "🌾 Led a <strong>Crop Production Analysis project</strong> analyzing a dataset of over 240,000 rows from 1997–2015, using <strong>Python</strong> libraries (Pandas, NumPy, Matplotlib, Seaborn) for data preprocessing and visualization.<br>"
-                "🧹 Performed extensive <strong>data preprocessing</strong>, handling 3,730 null values, removing outliers (e.g., zero production rows), and standardizing crop names (e.g., merging synonyms like Paddy to Rice) to ensure data quality.<br>"
-                "📊 Developed <strong>interactive Power BI dashboards</strong> to visualize crop production trends across seasons (Kharif, Rabi, Whole Year), states, and zones, enabling stakeholders to identify key agricultural insights.<br>"
-                "🔍 Uncovered <strong>critical insights</strong>, including coconut’s 92% production dominance, leading to separate dataset analyses for balanced visualization of other crops like Rice, Wheat, and Pulses.<br>"
-                "📈 Contributed to <strong>High-Level Design (HLD) and Low-Level Design (LLD)</strong> documentation, wireframes, and architecture, enhancing project planning.<br>"
-                "🤝 Strengthened <strong>project management</strong> and skills, adhering to industry standards and delivering a comprehensive video presentation of findings."
-        },
-        {
             "company": "Abhay Engineering",
             "position": "Buisness Analyst Intern",
             "period": "April 2025 - May 2024",
@@ -1458,6 +1455,18 @@ def experience_section():
         "📦 Performed <strong>product performance analysis</strong>, driving <strong>inventory optimization</strong> and reducing stockouts by <strong>30%</strong>.<br>"
         "💡 Built <strong>customer segmentation models</strong> using RFM metrics, enabling targeted marketing strategies that increased engagement by <strong>25%</strong>.<br>"
         "🤝 Collaborated with <strong>cross-functional teams</strong> to drive <strong>data-driven strategies</strong>, fostering growth and operational excellence."
+        },
+        {
+            "company": "INeuron Intelligence Pvt Ltd",
+            "position": "Data Analyst Intern</br>Remote",
+            "period": "June 2024 - July 2024",
+            "certificate": "experience/ineuron_certificate.pdf",
+            "description": "🌾 Led a <strong>Crop Production Analysis project</strong> analyzing a dataset of over 240,000 rows from 1997–2015, using <strong>Python</strong> libraries (Pandas, NumPy, Matplotlib, Seaborn) for data preprocessing and visualization.<br>"
+                "🧹 Performed extensive <strong>data preprocessing</strong>, handling 3,730 null values, removing outliers (e.g., zero production rows), and standardizing crop names (e.g., merging synonyms like Paddy to Rice) to ensure data quality.<br>"
+                "📊 Developed <strong>interactive Power BI dashboards</strong> to visualize crop production trends across seasons (Kharif, Rabi, Whole Year), states, and zones, enabling stakeholders to identify key agricultural insights.<br>"
+                "🔍 Uncovered <strong>critical insights</strong>, including coconut’s 92% production dominance, leading to separate dataset analyses for balanced visualization of other crops like Rice, Wheat, and Pulses.<br>"
+                "📈 Contributed to <strong>High-Level Design (HLD) and Low-Level Design (LLD)</strong> documentation, wireframes, and architecture, enhancing project planning.<br>"
+                "🤝 Strengthened <strong>project management</strong> and skills, adhering to industry standards and delivering a comprehensive video presentation of findings."
         }
     ]
     
