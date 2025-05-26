@@ -944,6 +944,15 @@ def home_section():
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-B150YR399D');
+
+      // Diagnostic to verify Google Analytics loading
+      window.addEventListener('load', function() {
+        if (typeof gtag === 'function') {
+          console.log('Google Analytics tag loaded successfully');
+        } else {
+          console.log('Error: Google Analytics tag not loaded');
+        }
+      });
     </script>
     """, unsafe_allow_html=True)
        
