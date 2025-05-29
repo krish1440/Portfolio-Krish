@@ -1114,7 +1114,7 @@ def home_section():
 
 def education_section():
   try:
-    """Education section with timeline style"""
+    
     st.markdown('<h2 class="section-header">🎓 <span>Education</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1158,7 +1158,7 @@ def education_section():
 
 def certifications_section():
   try:
-    """Certifications section with download link inside the card"""
+   
     st.markdown('<h2 class="section-header"> 🏆 <span>Certifications</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1241,7 +1241,7 @@ def certifications_section():
 
 def skills_section():
   try:
-    """Skills section with categorized skill boxes"""
+   
     st.markdown('<h2 class="section-header"> ⚡ <span>Skills</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1298,7 +1298,7 @@ def skills_section():
 
 def projects_section():
   try:
-    """Projects section"""
+    
     st.markdown('<h2 class="section-header"> 🚀  <span>Projects</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1439,7 +1439,6 @@ def projects_section():
 
 def experience_section():
   try:
-    """Experience section with download link inside the card"""
     st.markdown('<h2 class="section-header"> 💼  <span>Experience</span></h2>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
     st.markdown('<div </div>', unsafe_allow_html=True)
@@ -1616,8 +1615,7 @@ def areas_of_interest_section():
 
 
 def main():
-  try:
-    
+  try:  
     # Load custom CSS
     load_css()
     
@@ -1708,8 +1706,8 @@ def main():
         projects_section()
     elif st.session_state.current_section == 'Experience':
         experience_section()
-  except:
-    st.error("Somthing Went Wrong!!")
+  except Exception as e:
+        st.error(f"Somting went wrong")
 
 if __name__ == '__main__':
     main()
